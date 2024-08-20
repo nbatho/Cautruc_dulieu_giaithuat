@@ -2,3 +2,4 @@ output/CHELLO - Hello World.exe
 *.bin
 *.prob
 output/DSA04035 - Tinh Luy thua.exe
+*.exe
