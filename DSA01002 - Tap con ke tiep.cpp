@@ -7,7 +7,8 @@ void sinh() {
     while (i >= 1 && a[i] == n-k+i) {
         i--;
     }
-    if (i == 0) {
+    if (i == 0)  // cau hinh cuoi cung
+    {
         for (int i = 1;i<=k;i++) {
             cout << i << " ";
         }
