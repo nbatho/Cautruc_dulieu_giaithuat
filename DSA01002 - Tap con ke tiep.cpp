@@ -1,24 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 int n, k;
+int a[1001];
 void sinh() {
-    int a[k + 1];
-        for (int i = 1; i <= k; i++)
-            cin >> a[i];
-        a[0] = -1;
-        for (int i = k; i >= 0; i--)
-        {
-            if (a[i] != n - k + i)
-            {
-                a[i]++;
-                for (int j = i + 1; j <= k; j++)
-                    a[j] = a[j - 1] + 1;
-                break;
-            }
+    int i = k;
+    while (i >= 1 && a[i] == n-k+i) {
+        i--;
+    }
+    if (i == 0) {
+        for (int i = 1;i<=k;i++) {
+            cout << i << " ";
         }
-        for (int i = 1; i <= k; i++)
+    }
+    else {
+        a[i]++;
+        for (int j = i+1;j<=k;j++) {
+            a[j] = a[j-1] + 1;
+        }
+        for (int i = 1;i<=k;i++) {
             cout << a[i] << " ";
-        cout << endl;
+        }
+    }
+}
+void solve() {
+    cin >> n >> k;
+    for (int i = 1 ;i <= k;i++) cin >> a[i];
+    sinh();
+    cout << endl;
 }
 int main()
 {
@@ -26,8 +34,6 @@ int main()
     cin >> t;
     while (t--)
     {
-       
-        cin >> n >> k;
-        sinh();
+        solve();
     }
 }
