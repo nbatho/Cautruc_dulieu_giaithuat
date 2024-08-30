@@ -1,28 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
 int n,k;
-int a[15];
-void in() {
-    for (int i = 1 ;i <= k;i++) {
-        cout << a[i];     
+int a[1001];
+bool stop = false;
+void sinh() {
+    int i = k;
+    while(i>0 && a[i] == n-k+i) {
+        --i;
+    }
+    if (i ==  0) stop = true;
+    else {
+        a[i] +=1;
+        for (int j = i+1;j  <=k;j++) {
+            a[j] = a[j-1] +1;
+        }
     }
 }
-void BackTrack(int i) {
-    for (int j = a[i-1]+1;j<=n-k+i;j++) {
-        a[i] = j;
-        if (i == k) {
-            in();
-            cout << " ";
-        }
-        else BackTrack(i+1);
+void solve() {
+    cin >> n >> k;
+    for (int i = 1 ;i<=k;i++) {
+        a[i] = i;
     }
+    stop = false;
+    while (!stop) {
+        
+        for (int i = 1 ;i <=k;i++) {
+            cout << a[i];
+        }
+        sinh();
+        cout << " ";
+    }
+    
 }
 int main() {
     int t;
     cin >> t;
     while (t--) {
-        cin >> n >> k;
-        BackTrack(1);
+        solve(); 
         cout << endl;
     }
 }
