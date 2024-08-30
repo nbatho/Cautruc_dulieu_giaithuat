@@ -23,7 +23,7 @@ int main() {
     for (int i = 1 ;i <= n;i++) {
         cin >> b[i];
     }
-    sort(b,b+n);
+    sort(b+1,b+n+1);
     for (int i = 1 ;i <= n;i++) {
         a[i] = i;
         
