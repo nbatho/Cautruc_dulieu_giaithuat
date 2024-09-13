@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 int n;
-int c[105][105],  x[105];;
-int sum = 0;
-int best = INT_MAX;
-int xbest[105];
+int c[105][105];    // mảng đề cho 
+int  x[105];   
+int sum = 0;    
+int best = INT_MAX; // cost đến đích
+int xbest[105]; // lưu đường đi thỏa mãn
 bool used[105];
 void Try(int k) {
     if (sum >= best) return;
