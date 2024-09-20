@@ -17,6 +17,9 @@ void Try(int k) {
             if (k == n) {
                 int totalsum = sum + c[x[n]][1];
                 best = min(best,totalsum);
+                for (int j = 0 ;j<n;j++) {
+                    xbest[j] = x[j];
+                }
             }
             else Try(k+1);
             sum = sum - c[x[k-1]][i];
