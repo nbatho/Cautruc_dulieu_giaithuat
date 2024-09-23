@@ -4,7 +4,13 @@ using namespace std;
     sap xep theo thu tu tang dan
     tim vi tri k - a[i] dau tien va cuoi cung 
     so cap = vi tri cuoi - vi tri dau +1
-
+    vd 
+    4 6 
+    1 5 7 -1
+    a[0] = 1 => k - a[i] = 5 
+    vi tri dau tien = 2
+    vi tri cuoi cung = 2
+    => so cap = cuoi -dau +1 
 */
 int First(int a[],int l ,int r,int x) {
     int res = -1;
