@@ -3,6 +3,10 @@ using namespace std;
 typedef long long ll;
 /*
     2^(n-1)
+    x1 = n chọn 1 số sao cho tông == n => c1n
+    x1+ x2 = n chọn 2 số == n => c2n
+    x1+x2+... +xn = cnn
+    => số dãy = c1n + c2n+ ... + cnn = 2^(n-1)
 */
 const ll MOD = 123456789;
 ll power(ll n,ll k) {
