@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 const long long mod = 1e9+7;
+/*
+    dp[n] = dp[n-1] + dp[n-2] + .. dp[n-k]
+*/
 int main() {
     int t;
     cin >> t;
