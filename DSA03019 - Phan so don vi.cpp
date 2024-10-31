@@ -10,7 +10,7 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int p,q;
+        long long p,q;
         cin >> p >> q;
         long long ans;
         while(true) {
