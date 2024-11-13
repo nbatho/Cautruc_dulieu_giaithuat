@@ -13,13 +13,10 @@ void Init() {
     memset(visted,false,sizeof(visted));
 }
 void DFS(int u) {
-    queue <int> q;
-    q.push(u);
     cout << u << " ";
     visted[u] = true;
     for (auto i: a[u]) {
         if (!visted[i]) {
-            q.push(i);
             DFS(i);
         }
     }
