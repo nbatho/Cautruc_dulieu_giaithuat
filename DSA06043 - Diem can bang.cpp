@@ -11,6 +11,7 @@ int checkcanbang(int total, int leftsum,vector <int> &a,int n) {
     return -1;
 }
 void solve() {
+    int n;
     cin >> n;
     vector <int> a(n);
     int total = 0;
