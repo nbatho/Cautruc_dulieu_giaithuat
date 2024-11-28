@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
-using namespace std;
-int n; 
-int checkcanbang(int total, int leftsum,vector <int> &a) {
+using namespace std; 
+int checkcanbang(int total, int leftsum,vector <int> &a,int n) {
     for (int i = 0 ; i < n;i++) {
         int rightsum = total - leftsum - a[i];
         if (leftsum == rightsum && leftsum != 0 && rightsum != 0) {
@@ -19,7 +18,7 @@ void solve() {
         cin >> a[i];
         total += a[i];
     }
-    cout << checkcanbang(total,0,a);
+    cout << checkcanbang(total,0,a,n);
     
 }
 int main() {
