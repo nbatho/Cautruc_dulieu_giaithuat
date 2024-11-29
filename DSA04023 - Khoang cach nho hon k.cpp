@@ -11,6 +11,8 @@ void solve() {
     long long cnt = 0;
     for (int i = 0 ;i < n- 1;i++) {
         auto it = lower_bound(a.begin() + i + 1, a.end(), k + a[i]);
+        // it - a.begin() trả về chỉ số 
+        // *it trả về giá trị
         cnt += it - a.begin() - (i+1);
     }
     cout << cnt;
