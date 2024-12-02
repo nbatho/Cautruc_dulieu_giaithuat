@@ -14,6 +14,7 @@ void solve() {
         ans = max(ans,dp[i]);
     }
     cout << n - ans;
+    
 }
 int main() {
     int t;
